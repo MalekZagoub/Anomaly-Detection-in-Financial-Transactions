@@ -1,5 +1,8 @@
 # Anomaly Detection in Financial Bank Transactions
-<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/03/featured_img_devblogs-494.png" alt="Project Overview" width="600" height="300">
+<div style="text-align: center;">
+    <img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/03/featured_img_devblogs-494.png" alt="Project Overview" width="600" height="300">
+</div>
+
 
 
 # Project Overview
