@@ -35,11 +35,11 @@ Approach: Group customers by CUST_CUSTNO and their respective transaction amount
 # 4. Clustering-Based Anomaly Detection
 Objective: Utilize multilevel clustering to detect anomalies that may not be captured by rule-based methods.
 Approach:
-Apply clustering algorithms to group transactions based on similarity.
-Compare clustering results with anomalies detected by rule-based methods.
-Visualize clusters and the distribution of anomalies using color-coded graphs and plots.
+Apply clustering algorithms to group transactions based on similarity.<br>
+Compare clustering results with anomalies detected by rule-based methods.<br>
+Visualize clusters and the distribution of anomalies using color-coded graphs and plots.<br>
 # 5. Summaries and Reporting
-Regular Updates: Provide periodic summaries of findings, including rule-based results, clustering insights, and comparisons.
+Regular Updates: Provide periodic summaries of findings, including rule-based results, clustering insights, and comparisons. <br>
 Interaction with Stakeholders: Communicate with the bank to verify findings and adjust the detection rules as needed.
 # 6. Tools and Technologies
 Data Processing: Python, Pandas, Dask for handling large datasets.
