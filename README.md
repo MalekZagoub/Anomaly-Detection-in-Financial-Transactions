@@ -30,10 +30,10 @@ Other transaction-specific details like BRANCH_OFFICE, REASON1, etc.
 # 2. Rule-Based Anomaly Detection
 Objective: Implement predefined rules provided by the bank to filter and identify anomalies.
 # 3. FP-Growth Analysis
-Objective: Apply the FP-Growth algorithm to mine frequent patterns and association rules in the transaction data.
+Objective: Apply the FP-Growth algorithm to mine frequent patterns and association rules in the transaction data.<br>
 Approach: Group customers by CUST_CUSTNO and their respective transaction amounts, and identify normal and anomalous transaction patterns by analyzing metrics such as lift and conviction.
 # 4. Clustering-Based Anomaly Detection
-Objective: Utilize multilevel clustering to detect anomalies that may not be captured by rule-based methods.
+Objective: Utilize multilevel clustering to detect anomalies that may not be captured by rule-based methods.<br>
 Approach:
 Apply clustering algorithms to group transactions based on similarity.<br>
 Compare clustering results with anomalies detected by rule-based methods.<br>
