@@ -13,6 +13,7 @@ Key Components
 # 1. Data Description
 Source: Financial transaction datasets stored in parquet format.
 Data Structure: The data includes columns such as:
+
 CUST_CUSTNO: Customer identifier.
 
 ACC_BUSINESSTYPE: Type of business (e.g., individual, enterprise).
