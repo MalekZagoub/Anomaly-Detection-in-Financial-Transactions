@@ -21,14 +21,16 @@ Data Structure: The data includes the following key columns:
 
 2. Rule-Based Anomaly Detection
 Objective: Implement predefined rules provided by the bank to identify suspicious transactions and anomalies, such as customers making frequent high-value transactions within short time frames.<br>
-# Key Rule Example: A rule targeting customers who made both deposits and withdrawals of 100,000 VND on the same day, which could indicate irregular business practices.
+# Key Rule Example: A rule targeting customers who made equal deposits and withdrawals on the same day, with amounts exceeding a specified threshold, which could indicate irregular business practices.
 
 <br>
+
 3. FP-Growth Analysis
 Objective: Apply the FP-Growth algorithm to mine frequent patterns and discover association rules within the transaction data.
 Approach: Group customers by CUST_CUSTNO and analyze transaction amounts to differentiate between normal and anomalous patterns. Metrics such as lift and conviction are used to evaluate the significance of these rules.
 
 <br>
+
 4. Clustering-Based Anomaly Detection
 Objective: Utilize multilevel clustering to detect anomalies that may not be captured by rule-based methods.
 Approach:
