@@ -5,13 +5,14 @@
 </div>
 
 
-Project Overview
+# Project Overview
 This project focuses on detecting anomalies in financial bank transactions by combining rule-based approaches and advanced clustering techniques. The primary objective is to strengthen financial security by identifying unusual transaction patterns that may indicate fraudulent activities or irregularities. This initiative is part of a broader effort to apply machine learning and data mining techniques to safeguard financial systems.
 
 <br>
-Key Components
+
+# Key Components
 <br>
-1. Data Description
+1.Data Description  
 Source: Financial transaction datasets stored in parquet format.
 Data Structure: The data includes the following key columns:
 
@@ -41,7 +42,7 @@ Pattern Mining: FP-Growth for mining frequent patterns and generating associatio
 Clustering: Scikit-learn, with visualization tools like Matplotlib and Seaborn for plotting results.
 Data Storage: Integration with Google Drive for storing and managing parquet files.
 <br>
-7. Additional Enhancements (Based on Project History)
+7. Additional Enhancements
 Anomaly Filters: Custom rules were developed to detect transactions involving unusual deposit and withdrawal patterns (e.g., where deposits are greater than 6,000,000 VND and withdrawals are ≥95% of the deposited amount).
 Multilevel Clustering: Added multilevel clustering techniques to identify anomalous clusters and compared them with rule-based anomalies to find overlaps or missed detections.
 
