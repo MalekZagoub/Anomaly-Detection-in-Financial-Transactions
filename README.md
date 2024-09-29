@@ -35,18 +35,21 @@ Approach: Group customers by CUST_CUSTNO and analyze transaction amounts to diff
 Objective: Utilize multilevel clustering to detect anomalies that may not be captured by rule-based methods.
 Approach:
 
-<ul> <li>Apply clustering algorithms (e.g., k-means, DBSCAN) to group transactions based on similarity across various features (amounts, dates, and customer profiles).</li> <li>Compare clustering results with the anomalies identified through rule-based methods.</li> <li>Visualize clusters and anomalies using **color-coded graphs** and **plots** for better interpretation and communication.</li> </ul> <br>
+<ul> <li>Apply clustering algorithms (e.g., k-means, DBSCAN) to group transactions based on similarity across various features (amounts, dates, and customer profiles).</li> <li>Compare clustering results with the anomalies identified through rule-based methods.</li> <li>Visualize clusters and anomalies using color-coded graphs and plots for better interpretation and communication.</li> </ul> <br>
 
 5. Summaries and Reporting
 Regular Updates: Periodic reports on findings from both rule-based and clustering methods, including key insights and visualizations. <br>
 Interaction with Stakeholders: Continuous collaboration with the bank to verify findings, adjust detection rules, and ensure the accuracy of anomaly detection.
 <br>
 
-6. Tools and Technologies
-   
-Data Processing: Utilized Python, Pandas, and Dask for scalable and efficient processing of large financial datasets, ensuring seamless handling of millions of rows. <br>
-Pattern Mining: Implemented FP-Growth for mining frequent transaction patterns and generating association rules to uncover significant correlations in the data. <br>
-Anomaly Detection: Applied custom filtering methods to flag anomalous behavior such as deposits greater than 6,000,000 VND and withdrawals ≥95% of the deposited amount. <br>
-Clustering: Leveraged Scikit-learn for multilevel clustering techniques, identifying and visualizing potential anomalies. Visualization tools like Matplotlib and Seaborn were used for representing clusters and distributions graphically. <br>
-Deep Learning: Integrated VAE-Transformer (Variational Autoencoder + Transformer), a hybrid Deep Learning model, for advanced anomaly detection in financial transactions. This approach combines the strength of VAE in dimensionality reduction and feature learning with Transformers for sequential anomaly detection. <br>
-Data Storage: Employed Google Drive for managing and storing large parquet files, ensuring easy access and processing within a distributed environment. <br>
+<h2>6. Tools and Technologies</h2>
+
+<ul>
+  <li><strong>Data Processing</strong>: Utilized Python, Pandas, and Dask for scalable and efficient processing of large financial datasets, ensuring seamless handling of millions of rows.</li>
+  <li><strong>Pattern Mining</strong>: Implemented FP-Growth for mining frequent transaction patterns and generating association rules to uncover significant correlations in the data.</li>
+  <li><strong>Anomaly Detection</strong>: Applied custom filtering methods to flag anomalous behavior such as deposits greater than 6,000,000 VND and withdrawals ≥95% of the deposited amount.</li>
+  <li><strong>Clustering</strong>: Leveraged Scikit-learn for multilevel clustering techniques, identifying and visualizing potential anomalies. Visualization tools like Matplotlib and Seaborn were used for representing clusters and distributions graphically.</li>
+  <li><strong>Deep Learning</strong>: Integrated <strong>VAE-Transformer (Variational Autoencoder + Transformer)</strong>, a hybrid Deep Learning model, for advanced anomaly detection in financial transactions. This approach combines the strength of VAE in dimensionality reduction and feature learning with Transformers for sequential anomaly detection.</li>
+  <li><strong>Data Storage</strong>: Employed Google Drive for managing and storing large parquet files, ensuring easy access and processing within a distributed environment.</li>
+</ul>
+
