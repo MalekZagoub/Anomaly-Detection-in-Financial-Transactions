@@ -50,6 +50,10 @@ Data Storage: Integration with Google Drive for storing and managing parquet fil
 <br>
 
 7. Additional Enhancements
-Anomaly Filters: Custom rules were developed to detect transactions involving unusual deposit and withdrawal patterns (e.g., where deposits are greater than 6,000,000 VND and withdrawals are ≥95% of the deposited amount).
-Multilevel Clustering: Added multilevel clustering techniques to identify anomalous clusters and compared them with rule-based anomalies to find overlaps or missed detections.
+Anomaly Filters: Custom rules were developed to detect transactions involving unusual deposit and withdrawal patterns (e.g., where deposits are greater than 6,000,000 VND and withdrawals are ≥95% of the deposited amount). <br>
+
+Multilevel Clustering: Added multilevel clustering techniques to identify anomalous clusters and compared them with rule-based anomalies to find overlaps or missed detections. <br>
+
+VAE+ Transformer: Anomaly VAE-Transformer: A Deep Learning
+ Approach for Anomaly Detection
 
