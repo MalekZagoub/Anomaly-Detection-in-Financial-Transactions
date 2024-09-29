@@ -43,6 +43,7 @@ Interaction with Stakeholders: Continuous collaboration with the bank to verify 
 <br>
 
 6. Tools and Technologies
+   
 Data Processing: Utilized Python, Pandas, and Dask for scalable and efficient processing of large financial datasets, ensuring seamless handling of millions of rows. <br>
 Pattern Mining: Implemented FP-Growth for mining frequent transaction patterns and generating association rules to uncover significant correlations in the data. <br>
 Anomaly Detection: Applied custom filtering methods to flag anomalous behavior such as deposits greater than 6,000,000 VND and withdrawals ≥95% of the deposited amount. <br>
