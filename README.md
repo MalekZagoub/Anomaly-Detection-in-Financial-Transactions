@@ -10,37 +10,61 @@ This project focuses on detecting anomalies in financial bank transactions by co
 
 <br>
 
-# Key Components
-<br>
-1.Data Description
+<h2>Key Components</h2>
 
-Source: Financial transaction datasets stored in parquet format.
-Data Structure: The data includes the following key columns:
+<h3>1. Data Description</h3>
+<p><strong>Source</strong>: Financial transaction datasets stored in parquet format.</p>
+<p><strong>Data Structure</strong>: The dataset consists of multiple key columns that capture essential transaction details, including:</p>
 
-<ul> <li><b>CUST_CUSTNO</b>: Unique customer identifier.</li> <li><b>ACC_BUSINESSTYPE</b>: Type of business (e.g., individual, enterprise).</li> <li><b>ACC_ACCNO</b>: Account number associated with the transaction.</li> <li><b>AMOUNT</b> and <b>AMOUNTORIG</b>: Transaction amounts in different currencies.</li> <li><b>VALUEDATE</b>: Date the transaction was recorded.</li> <li><b>CONTRA_ACCNO</b>: Contra account number involved in the transaction.</li> <li>Additional transaction-specific details such as <b>BRANCH_OFFICE</b>, <b>REASON1</b>, etc.</li> </ul> <br>
+<ul>
+  <li><strong>CUST_CUSTNO</strong>: A unique identifier assigned to each customer.</li>
+  <li><strong>ACC_BUSINESSTYPE</strong>: The type of business associated with the account (e.g., individual, enterprise, non-bank credit institution).</li>
+  <li><strong>ACC_ACCNO</strong>: The account number from which the transaction was made.</li>
+  <li><strong>AMOUNT</strong> and <strong>AMOUNTORIG</strong>: The transaction amounts, provided in both the account's currency and the original transaction currency.</li>
+  <li><strong>VALUEDATE</strong>: The recorded date of the transaction, which helps in tracking time-based patterns.</li>
+  <li><strong>CONTRA_ACCNO</strong>: The counterparty account involved in the transaction, used to identify the destination or source of the transaction.</li>
+  <li>Additional columns capturing transaction-specific details, such as <strong>BRANCH_OFFICE</strong> (location of the transaction), <strong>REASON1</strong> (description of the transaction), and more.</li>
+</ul>
 
-2. Rule-Based Anomaly Detection
-Objective: Implement predefined rules provided by the bank to identify suspicious transactions and anomalies, such as customers making frequent high-value transactions within short time frames.<br>
-# Key Rule Example: A rule targeting customers who made equal deposits and withdrawals on the same day, with amounts exceeding a specified threshold, which could indicate irregular business practices.
+<p>This structure provides a detailed framework for both pattern mining and anomaly detection.</p>
 
-<br>
+<h3>2. Rule-Based Anomaly Detection</h3>
+<p><strong>Objective</strong>: To implement and apply predefined rules, provided by the bank, for identifying suspicious transactions and patterns indicative of fraudulent or irregular behavior.</p>
 
-3. FP-Growth Analysis
-Objective: Apply the FP-Growth algorithm to mine frequent patterns and discover association rules within the transaction data.
-Approach: Group customers by CUST_CUSTNO and analyze transaction amounts to differentiate between normal and anomalous patterns. Metrics such as lift and conviction are used to evaluate the significance of these rules.
+<ul>
+  <li><strong>Focus</strong>: Rules are designed to capture activities such as frequent high-value transactions or unusual deposit-withdrawal patterns.</li>
+  <li><strong>Key Rule Example</strong>: A rule targeting customers who deposit and withdraw equal amounts on the same day, where the transaction amounts exceed a certain threshold. This may signal irregular business practices or attempts to circumvent detection systems.</li>
+</ul>
 
-<br>
+<p>This rule-based approach serves as the foundation for flagging known suspicious behaviors before exploring more advanced methods.</p>
 
-4. Clustering-Based Anomaly Detection
-Objective: Utilize multilevel clustering to detect anomalies that may not be captured by rule-based methods.
-Approach:
+<h3>3. FP-Growth Analysis</h3>
+<p><strong>Objective</strong>: To leverage the FP-Growth algorithm for discovering frequent patterns and generating association rules within the transaction dataset.</p>
 
-<ul> <li>Apply clustering algorithms (e.g., k-means, DBSCAN) to group transactions based on similarity across various features (amounts, dates, and customer profiles).</li> <li>Compare clustering results with the anomalies identified through rule-based methods.</li> <li>Visualize clusters and anomalies using color-coded graphs and plots for better interpretation and communication.</li> </ul> <br>
+<ul>
+  <li><strong>Approach</strong>: Transactions are grouped by <strong>CUST_CUSTNO</strong> (customer ID) to evaluate patterns in transaction amounts, helping to differentiate between normal customer behavior and anomalies.</li>
+  <li><strong>Metrics</strong>: The analysis employs key metrics such as <strong>lift</strong> and <strong>conviction</strong> to assess the significance of the discovered rules, with higher values indicating stronger relationships between variables (e.g., amounts and transaction frequency).</li>
+</ul>
 
-5. Summaries and Reporting
-Regular Updates: Periodic reports on findings from both rule-based and clustering methods, including key insights and visualizations. <br>
-Interaction with Stakeholders: Continuous collaboration with the bank to verify findings, adjust detection rules, and ensure the accuracy of anomaly detection.
-<br>
+<p>This analysis provides deeper insights into transaction behavior and identifies new potential rules for anomaly detection.</p>
+
+<h3>4. Clustering-Based Anomaly Detection</h3>
+<p><strong>Objective</strong>: To complement the rule-based method with clustering algorithms that detect outliers and anomalies that might not follow predefined rules.</p>
+
+<ul>
+  <li><strong>Approach</strong>: Utilize algorithms such as <strong>k-means</strong> and <strong>DBSCAN</strong> to group transactions based on similarity across features like transaction amount, dates, and customer profiles.</li>
+  <li><strong>Comparison</strong>: The results from clustering are cross-referenced with rule-based anomalies to identify overlaps or discover new suspicious patterns.</li>
+  <li><strong>Visualization</strong>: Clusters and identified anomalies are visualized using color-coded graphs and plots, making it easier to communicate findings and understand transaction behaviors at a glance.</li>
+</ul>
+
+<p>This combination of clustering and rule-based detection broadens the scope of anomaly identification, allowing for the discovery of previously unseen patterns.</p>
+
+<h3>5. Summaries and Reporting</h3>
+<p><strong>Regular Updates</strong>: Periodic reports are generated to summarize findings from both rule-based and clustering approaches. These reports include key insights, rule violations, and visual representations of anomalies.</p>
+<p><strong>Interaction with Stakeholders</strong>: Continuous collaboration with the bank and relevant stakeholders ensures that findings are validated, detection rules are fine-tuned, and the overall anomaly detection process remains accurate and up-to-date.</p>
+
+<p>This comprehensive reporting process helps maintain transparency and strengthens the anomaly detection system.</p>
+
 
 <h2>6. Tools and Technologies</h2>
 
